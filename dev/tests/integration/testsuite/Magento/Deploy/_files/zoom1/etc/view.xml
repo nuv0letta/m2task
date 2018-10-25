@@ -23,7 +23,7 @@
         <item type="file">Lib::legacy-build.min.js</item>
         <item type="file">Lib::mage/captcha.js</item>
         <item type="file">Lib::mage/dropdown_old.js</item>
-        <item type="file">Lib::mage/list.js</item>
+        <item type="file">Lib::mage/filtered-list-get.js</item>
         <item type="file">Lib::mage/loader_old.js</item>
         <item type="file">Lib::mage/webapi.js</item>
         <item type="file">Lib::mage/zoom.js</item>

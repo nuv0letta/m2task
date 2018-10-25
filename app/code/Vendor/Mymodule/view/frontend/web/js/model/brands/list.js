@@ -45,38 +45,8 @@ define([
     return {
         brands: ko.observableArray(brands),
         filters: ko.observable(filters),
-
         selectedCity: ko.observable(''),
         queryBrandName: ko.observable(''),
         filteredList: ko.observableArray([]),
-
-        /**
-         * Gets filtered list
-         */
-
-        getFilteredList: function () {
-            var self = this;
-
-            ko.computed(function handleChange() {
-                var query = self.queryBrandName();
-                var city = self.selectedCity();
-                var brandList = self.brands();
-
-                if (!city || city === "All") {
-
-                    self.filteredList(ko.utils.arrayFilter(brandList, function(item) {
-                        return ko.utils.stringStartsWith(item.name.toLowerCase(), query.toLowerCase());
-                    }));
-
-                } else {
-
-                    self.filteredList(ko.utils.arrayFilter(brandList, function(item) {
-                        return ko.utils.stringStartsWith(item.city.toLowerCase(), city.toLowerCase()) &&
-                            ko.utils.stringStartsWith(item.name.toLowerCase(), query.toLowerCase());
-                    }));
-
-                }
-            });
-        }
     };
 });

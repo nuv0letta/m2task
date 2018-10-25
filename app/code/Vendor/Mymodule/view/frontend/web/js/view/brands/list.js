@@ -3,8 +3,9 @@ define([
     'ko',
     'underscore',
     'uiComponent',
-    'Vendor_Mymodule/js/model/brands/list'
-], function ($, ko, _, Component, brandslist) {
+    'Vendor_Mymodule/js/model/brands/list',
+    'Vendor_Mymodule/js/action/brands/filtered-list-get'
+], function ($, ko, _, Component, brandslist, getFilteredList) {
     'use strict';
 
     return Component.extend({
@@ -25,7 +26,7 @@ define([
         },
 
         getFilteredList: function () {
-            brandslist.getFilteredList();
+            getFilteredList.getFilteredList();
         }
     });
 });
